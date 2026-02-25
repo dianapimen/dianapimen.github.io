@@ -1,12 +1,21 @@
 {
+<<<<<<< HEAD
   "name": "mycv2",
+=======
+  "name": "cv-diana-style",
+>>>>>>> 0c68f1b (initial commit)
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+<<<<<<< HEAD
     "test": "ng test"
+=======
+    "test": "ng test",
+    "serve:ssr:cv-diana-style": "node dist/cv-diana-style/server/server.mjs"
+>>>>>>> 0c68f1b (initial commit)
   },
   "prettier": {
     "printWidth": 100,
@@ -21,21 +30,40 @@
     ]
   },
   "private": true,
+<<<<<<< HEAD
   "packageManager": "npm@11.8.0",
+=======
+  "packageManager": "npm@10.9.4",
+>>>>>>> 0c68f1b (initial commit)
   "dependencies": {
     "@angular/common": "^21.1.0",
     "@angular/compiler": "^21.1.0",
     "@angular/core": "^21.1.0",
     "@angular/forms": "^21.1.0",
     "@angular/platform-browser": "^21.1.0",
+<<<<<<< HEAD
     "@angular/router": "^21.1.0",
+=======
+    "@angular/platform-server": "^21.1.0",
+    "@angular/router": "^21.1.0",
+    "@angular/ssr": "^21.1.5",
+    "express": "^5.1.0",
+>>>>>>> 0c68f1b (initial commit)
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@angular/build": "^21.1.4",
     "@angular/cli": "^21.1.4",
     "@angular/compiler-cli": "^21.1.0",
+=======
+    "@angular/build": "^21.1.5",
+    "@angular/cli": "^21.1.5",
+    "@angular/compiler-cli": "^21.1.0",
+    "@types/express": "^5.0.1",
+    "@types/node": "^20.17.19",
+>>>>>>> 0c68f1b (initial commit)
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
