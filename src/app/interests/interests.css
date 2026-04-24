@@ -1,0 +1,36 @@
+.interests-container {
+    padding: 15px 0;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-bottom: 2px solid #000;
+    padding-bottom: 8px;
+    margin-bottom: 1.2rem;
+}
+
+.interests-pills {
+    display: flex;
+    flex-wrap: wrap; /* Para que si son muchos, pasen a la siguiente línea */
+    gap: 10px;
+}
+
+.pill {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 20px; /* Bordes redondeados tipo pastilla */
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.pill:hover {
+    background-color: #cc0000; /* Rojo Musk al pasar el mouse */
+    color: white;
+    border-color: #cc0000;
+    transform: translateY(-2px); /* Pequeño salto elegante */
+}

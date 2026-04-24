@@ -1,0 +1,80 @@
+/* Contenedor principal del Header */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Nombre a la izquierda, contacto a la derecha */
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: #ffffff;
+    color: #1a1a1a; /* Texto oscuro para que se vea */
+    border-bottom: 2px solid #eeeeee;
+    position: relative; /* Para el centrado de la foto */
+}
+
+/* Columna Izquierda: Nombre y Meta */
+.header-left {
+    flex: 1;
+    text-align: left;
+}
+
+.header-left h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: #000000; /* Negro puro */
+    text-transform: uppercase;
+}
+
+.header-left p {
+    font-size: 1rem;
+    color: #444444;
+    max-width: 350px; /* Para que la meta no choque con la foto */
+    margin-top: 10px;
+}
+
+/* Foto Centrada */
+.header-photo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header-photo-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-photo-center img {
+    /* Ajusta el tamaño aquí */
+    width: 160px;
+    height: 160px;
+
+    /* Hace que la imagen sea un círculo */
+    border-radius: 50%;
+
+
+    border: 4px solid #888888;
+
+    /* Evita que la foto se estire si no es cuadrada */
+    object-fit: cover;
+
+    /* Opcional: separarlo un poco de los textos */
+    margin: 0 20px;
+}
+
+/* Columna Derecha: Datos de contacto */
+.header-right {
+    flex: 1;
+    text-align: right;
+}
+
+.header-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-right li {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+}

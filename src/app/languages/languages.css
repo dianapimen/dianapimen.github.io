@@ -1,0 +1,43 @@
+.languages-container {
+    padding: 10px 0;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-bottom: 2px solid #000;
+    padding-bottom: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.languages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espacio vertical entre idiomas */
+}
+
+.language-item {
+    display: flex;
+    /* ESTA ES LA CLAVE: Empuja el nivel al borde opuesto */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0; /* Una línea muy sutil para separar */
+}
+
+.language-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #222;
+    text-transform: capitalize;
+}
+
+.language-level-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #cc0000; /* Rojo para que el nivel resalte en el borde derecho */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
