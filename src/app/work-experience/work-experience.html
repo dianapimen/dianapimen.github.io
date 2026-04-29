@@ -1,0 +1,20 @@
+<section class="experience-section">
+  <h2 class="section-title">Work Experience</h2>
+
+  <div class="work-item" *ngFor="let job of workList">
+
+    <div class="work-header">
+      <span class="work-date">{{ job.startDate }} - {{ job.endDate }}</span>
+      <span class="work-location">{{ job.location }}</span>
+    </div>
+
+    <h3 class="work-position">{{ job.position }}</h3>
+    <p class="work-company">{{ job.company }}</p>
+
+    <p class="work-description">{{ job.description }}</p>
+
+    <ul class="accomplishments" *ngIf="job.accomplishments">
+        <li>{{ job.accomplishments }}</li>
+    </ul>
+  </div>
+</section>

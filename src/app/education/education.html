@@ -1,0 +1,13 @@
+<section class="education-section">
+  <h2 class="section-title">Education</h2>
+
+  <div class="education-item" *ngFor="let ed of educationList">
+    <div class="education-header">
+      <span class="education-date">{{ ed.start_date }} - {{ ed.end_date }}</span>
+      <span class="education-location">{{ ed.location }}</span>
+    </div>
+
+    <h3 class="education-title">{{ ed.title }}</h3>
+    <p class="education-institution">{{ ed.institution }}</p>
+  </div>
+</section>
