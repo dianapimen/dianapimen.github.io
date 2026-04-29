@@ -4,5 +4,5 @@ export interface WorkExperience {
     location: string;
     position: string;
     company: string;
-    accomplishments: string; // O string[] si usas lista
+    accomplishments: string[]; // O string[] si usas lista
 }

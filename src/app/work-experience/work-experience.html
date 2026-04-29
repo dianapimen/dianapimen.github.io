@@ -11,10 +11,11 @@
     <h3 class="work-position">{{ job.position }}</h3>
     <p class="work-company">{{ job.company }}</p>
 
-    <p class="work-description">{{ job.description }}</p>
 
-    <ul class="accomplishments" *ngIf="job.accomplishments">
-        <li>{{ job.accomplishments }}</li>
-    </ul>
+    <ul class="accomplishments" *ngIf="job.accomplishments && job.accomplishments.length > 0">
+        <li *ngFor="let logro of job.accomplishments">
+          {{ logro }}
+        </li>
+        </ul>
   </div>
 </section>

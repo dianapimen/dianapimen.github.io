@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // <--- CORRECCIÓN 1: Agregado OnInit
 import { CommonModule } from '@angular/common';
 import { WorkExperienceService } from '../services/work-experience-service/work-experience';
+import { WorkExperience as WorkModel } from '../models/work-experience/work-experience.model';
 
 @Component({
   selector: 'app-work-experience',
@@ -11,7 +12,7 @@ import { WorkExperienceService } from '../services/work-experience-service/work-
 })
 export class WorkExperience implements OnInit {
 
-  public workList: any[] = [];
+  public workList: WorkModel[] = [];
 
   constructor(private workService: WorkExperienceService,
               private cdr: ChangeDetectorRef
