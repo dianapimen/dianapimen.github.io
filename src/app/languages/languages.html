@@ -1,0 +1,10 @@
+<section class="languages-container">
+  <h2 class="section-title">Languages</h2>
+
+  <div class="languages-list">
+    <div class="language-item" *ngFor="let lang of languagesList">
+      <span class="language-name">{{ lang.name }}</span>
+      <span class="language-level-badge">{{ lang.level }}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<div class="header-container" *ngIf="header">
+    <div class="header-left">
+        <h1>{{ header.name }}</h1>
+        <p>{{ header.goalLife }}</p>
+    </div>
+
+    <div class="header-photo-center">
+    <img src="https://res.cloudinary.com/dccgiwge7/image/upload/v1777007838/WhatsApp_Image_2026-04-23_at_23.13.49_snldqm.jpg" alt="Foto">
+</div>
+
+    <div class="header-right">
+    <ul>
+        <li>{{ header.email }} <i class="fa-solid fa-envelope"></i></li>
+        <li>{{ header.phoneNumber }} <i class="fa-solid fa-phone"></i></li>
+        <li>{{ header.location }} <i class="fa-solid fa-location-dot"></i></li>
+        <li *ngIf="header.socialNetwork">
+            {{ header.socialNetwork.github }} <i class="fa-brands fa-github"></i>
+        </li>
+    </ul>
+</div>
+</div>

@@ -1,0 +1,45 @@
+.education-section {
+    margin-top: 1.5rem;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-bottom: 2px solid #000;
+    padding-bottom: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.education-item {
+    margin-bottom: 1.5rem;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.education-date {
+    color: #cc0000; /* Rojo distintivo */
+    text-transform: capitalize;
+}
+
+.education-location {
+    color: #666;
+}
+
+.education-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.education-institution {
+    font-size: 1rem;
+    color: #333;
+    margin: 2px 0 0 0;
+}

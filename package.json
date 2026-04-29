@@ -1,6 +1,8 @@
 {
   "name": "cv-diana-style",
   "version": "0.0.0",
+  "private": true,
+  "packageManager": "npm@11.8.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,18 +23,18 @@
       }
     ]
   },
-  "private": true,
-  "packageManager": "npm@10.9.4",
   "dependencies": {
     "@angular/common": "^21.1.0",
     "@angular/compiler": "^21.1.0",
     "@angular/core": "^21.1.0",
+    "@angular/fire": "^20.0.1",
     "@angular/forms": "^21.1.0",
     "@angular/platform-browser": "^21.1.0",
     "@angular/platform-server": "^21.1.0",
     "@angular/router": "^21.1.0",
     "@angular/ssr": "^21.1.5",
     "express": "^5.1.0",
+    "firebase": "^11.10.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

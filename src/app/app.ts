@@ -1,11 +1,29 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AppHeader } from './header/header';
+import { WorkExperience } from './work-experience/work-experience';
+import { Skills } from './skills/skills';
+import { EducationComponent } from './education/education';
+import { CertificatesComponent } from './certificates/certificates';
+import { Languages } from './languages/languages';
+import { Interests } from './interests/interests';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   templateUrl: './app.html',
-  standalone: false,
-  styleUrl: './app.scss'
+  styleUrls: ['./app.css'],
+  imports: [
+    CommonModule,
+    AppHeader,
+    WorkExperience, // Agrégalos aquí también
+    Skills,
+    EducationComponent,
+    CertificatesComponent,
+    Languages,
+    Interests
+  ]
 })
 export class App {
-  protected readonly title = signal('cv-diana-style');
+  title = 'cv-diana-style';
 }
