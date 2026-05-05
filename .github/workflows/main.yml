@@ -47,10 +47,12 @@ jobs:
 
       - name: copy model to the Docker image
         run: |
-          # Intentamos copiar desde la carpeta browser (que es donde Angular 17+ suele poner todo)
-          # El "|| true" evita que falle si la carpeta no existe
+          # 1. Borramos el "It works!" original de Apache para que no estorbe
+          docker exec http_base rm -rf /usr/local/apache2/htdocs/*
+          
+          # 2. Copiamos tus archivos (intentando ambas rutas posibles)
           docker cp docs/browser/. http_base:/usr/local/apache2/htdocs || docker cp docs/. http_base:/usr/local/apache2/htdocs
-
+          
       - name: Build the custom Docker image
         run: |
           docker commit --change "ENV MODEL_NAME http_base" http_base ${{ secrets.DOCKER_USERNAME }}/mycv:${{ github.sha }}
