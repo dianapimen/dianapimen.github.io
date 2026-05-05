@@ -21,6 +21,21 @@ jobs:
       - name: npm install
         run: npm install --legacy-peer-deps 
 
+      - name: Create Environment File
+        run: |
+          mkdir -p src/environments
+          echo "export const environment ={
+            production: true,
+            firebase:{
+              apiKey: \"AIzaSyAJSc1_U95VY7Z-6PxPNu2oOaH4QiD2WnI\",
+              authDomain: \"my-cv-8616b.firebaseapp.com\",
+              projectId: \"my-cv-8616b\",
+              storageBucket: \"my-cv-8616b.firebasestorage.app\",
+              messagingSenderId: \"990778228704\",
+              appId: \"1:990778228704:web:f111da63141299f4227585\"
+            }
+          };" > src/environments/environment.ts
+
       - name: build
         run: npm run build -- --output-path=docs
 
