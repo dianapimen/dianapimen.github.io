@@ -37,15 +37,13 @@ jobs:
           };" > src/environments/environment.ts
 
       - name: build
-        # Usamos el comando que fuerza la salida a docs sin subcarpetas extra
         run: npx ng build --output-path=docs --base-href=/
 
       - name: Download and run the Docker base image
         run: docker run -d --name http_base httpd
 
       - name: copy model to the Docker image
-        # Al usar docs/browser/. nos aseguramos de agarrar los archivos finales
-        # que genera el builder "@angular/build:application"
+        
         run: docker cp docs/browser/. http_base:/usr/local/apache2/htdocs
 
       - name: Build the custom Docker image
@@ -53,4 +51,5 @@ jobs:
           docker commit --change "ENV MODEL_NAME http_base" http_base ${{ secrets.DOCKER_USERNAME }}/mycv:${{ github.sha }}
 
       - name: Docker Push
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/mycv:${{ github.sha }}
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/mycv:${{ github.sha }}
