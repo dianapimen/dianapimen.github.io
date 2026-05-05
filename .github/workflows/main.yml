@@ -2,7 +2,7 @@ name: Angular_DockerImage
 
 on:
   push:
-    branches: [ master ] # Asegúrate de que tu rama se llame master y no main
+    branches: [ master ] 
   pull_request:
     branches: [ master ]
 
