@@ -47,11 +47,12 @@ jobs:
 
       - name: copy model to the Docker image
         run: |
-          # 1. Borramos el "It works!" original de Apache para que no estorbe
+          # Limpiamos todo lo que Apache tenga por defecto
           docker exec http_base rm -rf /usr/local/apache2/htdocs/*
           
-          # 2. Copiamos tus archivos (intentando ambas rutas posibles)
-          docker cp docs/browser/. http_base:/usr/local/apache2/htdocs || docker cp docs/. http_base:/usr/local/apache2/htdocs
+          # Copiamos DIRECTAMENTE el contenido de la carpeta browser
+          # El punto final (.) es clave para copiar el contenido y no la carpeta
+          docker cp docs/browser/. http_base:/usr/local/apache2/htdocs/
           
       - name: Build the custom Docker image
         run: |
