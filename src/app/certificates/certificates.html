@@ -5,8 +5,18 @@
     <div class="cert-item" *ngFor="let c of certificatesList">
       <div class="cert-dot"></div>
       <div class="cert-content">
-        <h3 class="cert-title">{{ c.title }}</h3>
-        <span class="cert-date">{{ c.date }}</span>
+        <h3 class="cert-title">{{ c.displayTitle }}</h3>
+        <span class="cert-date" *ngIf="c.displayDate">{{ c.displayDate }}</span>
+
+        <a
+          *ngIf="c.issuerUrl"
+          class="cert-link"
+          [href]="c.issuerUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver certificado ↗
+        </a>
       </div>
     </div>
   </div>

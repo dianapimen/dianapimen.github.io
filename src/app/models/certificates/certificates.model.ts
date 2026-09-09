@@ -1,4 +1,7 @@
 export interface Certificate {
-    title: string;
-    date: any; // Usamos any para el Timestamp de Firestore
+    title?: string;
+    name?: string;
+    date?: any;
+    year?: string | number | null;
+    issuer?: string | null;
 }
